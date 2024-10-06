@@ -13,13 +13,13 @@ This project is the result of it. The idea is to use an E-Book reader like the s
   
 ## How it works
 - the server updates a website every minute
-  - [kindle.lab.internal/index.html.template](index.html.template) contains the basic layout of the website with placeholders
-  - [kindle.lab.internal/update.sh](update.sh) is fetching metrics from a server via APIs and replaces the placeholders
+  - [kindle.lab.internal/index.html.template](kindle.lab.internal/index.html.template) contains the basic layout of the website with placeholders
+  - [kindle.lab.internal/update.sh](kindle.lab.internal/update.sh) is fetching metrics from a server via APIs and replaces the placeholders
   - create a cronjob for executing the `update.sh` every minute like this
     - `$ crontab -e`
     - `* * * * * /home/stefan/docker/kindle.lab.internal/update.sh`
 - the server has a webserver installed like Caddy which serves the file
   - HTTPS can be an issue for old E-Book readers because of missing support for new encryption technology
-  - See [caddy/Caddyfile](Caddyfile) and setup using [docker compose](docker-compose.yml)
+  - See [caddy/Caddyfile](caddy/Caddyfile) and setup using [docker compose](docker-compose.yml)
 - the E-Book reader displays the website in its brower
   - the site refreshes itself automatically every minute
