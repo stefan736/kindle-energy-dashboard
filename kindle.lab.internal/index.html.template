@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<meta http-equiv="refresh" content="60" >
+		<meta charset="utf-8">
+		<style>
+html, body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100%;
+  height: 100%;
+}
+
+h1 {
+	margin-bottom: 2px;
+	padding-left: 40px;
+}
+
+table {
+	width: 100%;
+	border-spacing: 10px;
+}
+
+table td {
+	text-align: center;
+	border: 1px solid;
+	border-radius: 10px;
+	font-size: 30pt;
+
+}
+
+.label {
+    font-size: 10pt;
+}
+		</style>
+	</head>
+	<body>
+		<h1>Strom</h1>
+		<table>
+			<tr>
+				<td>
+					###genAC### W<br>
+					<span class="label">Produktion</span>
+				</td>
+				<td>
+					###currentConsumption### W<br>
+					<span class="label">Verbrauch</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					###batChargedPercentage### %<br>
+					<span class="label">Batterie Ladestand</span>
+				</td>
+				<td>
+					###batChangeW### W<br>
+					<span class="label">Batterie +rein/-raus</span>
+				</td>
+			</tr>
+		</table>
+		<h1>Wärmepumpe</h1>
+		<table>
+			<tr>
+				<td>
+					###temperaturOutside### °C<br>
+					<span class="label">Außentemperatur</span>
+				</td>
+				<td>
+					###statusCompressor###<br>
+					<span class="label">Wärmepumpe</span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					###temperaturWarmwater### °C<br>
+					<span class="label">Warmwasser</span>
+				</td>
+				<td>
+					###heatpumpEnergyConsumptionToday### ###heatpumpEnergyConsumptionToday_unit_of_measurement###<br>
+					<span class="label">Heutiger Energieverbrauch</span>
+				</td>
+			</tr>
+		</table>
+	<body>
+</html>
