@@ -1,0 +1,17 @@
+services:
+  caddy:
+    image: caddy:2
+    container_name: caddy
+    restart: always
+    ports:
+      - 443:443
+      - 80:80
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./caddy/config:/config
+      - ./caddy/data:/data
+      - ./caddy/certs:/root/certs
+      - ./kindle.lab.internal:/var/www/kindle.lab.internal
+    environment:
+      - EMAIL=me@something.com
+      - LOG_FILE=/data/access.log
