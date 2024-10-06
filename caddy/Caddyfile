@@ -1,5 +1,5 @@
 http://kindle.lab.internal {
-	# TLS is not working on the kindle, I think because of new cipher suites or something
+  # TLS is not working on the kindle, I think because of new cipher suites or something
   # http config
   root	* /var/www/kindle.lab.internal
   file_server
